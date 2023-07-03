@@ -1,0 +1,52 @@
+/* Body icon set start */
+.glow{
+    background-color: transparent;
+    transition: transform .2s; /* Animation */
+    margin: 0 auto;
+  }
+
+  .glow:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    color: goldenrod;
+  }
+  /* Body icon set end */
+
+.footer-head{
+    color: white;
+}
+
+@media screen and (min-width: 601px) {
+    .footer-head{
+      font-size: 40px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .footer-head {
+      font-size: 30px;
+    }
+  }
+
+.footer-text{
+    background-color: transparent ;
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+@media screen and (min-width: 601px) {
+    .footer-text{
+      font-size: 20px;
+     
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .footer-text {
+      font-size: 10px;
+    }
+  }
+
+ 

@@ -1,0 +1,26 @@
+<!-- order entry start -->
+
+<?php
+include "show.php";
+// retrieve form data
+if(isset($_POST['book_now'])){
+$user_email = $_SESSION['user_email'];
+$service_id = $_POST['book_now'];
+$qty = $_POST['qty'];
+$amt = $row['service_price'];
+$work_status = $_POST['work_status'];
+}
+// prepare and execute the SQL INSERT statement
+$stmt = $conn->prepare("INSERT INTO order_services (user_email, service_id, qty, amt, work_status) VALUES (?, ?, ?, ?, ?)");
+$stmt->bind_param("siiis", $user_email, $service_id, $qty, $amt, $work_status);
+$stmt->execute();
+
+// check for errors
+if ($stmt->error) {
+    die("Error adding order: " . $stmt->error);
+}
+
+echo "<script>window.location.href='service-select-page.php';</script>";
+?>
+
+<!-- order entry end -->
